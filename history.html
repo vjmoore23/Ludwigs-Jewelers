@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Ludwigs Jewelers has been in business for over 150 years and survived the burning of Chambersburg during the Civil War. Ludwigs Jewelers is now owned and operated by the 3rd and 4th generations of the Ludwig family.">
+    <meta name="keywords" content="ludwig family, ludwigs jewelers, civil war">
+	<link href = "css/css.css" type = "text/css" rel="stylesheet"/>
+    <title>Ludwig's Jewelers- History</title>
+<link rel="icon" href="icon.png" />
+<SCRIPT LANGUAGE="JavaScript">
+
+var item = new Array();
+
+
+c=0; item[c]=new Array("index.html","","Ludwigs Jewelers- Homepage","ludwigs,homepage,index,jewelry,gift,diamond,gemstone","Ludwigs Jewelers is a family owned business located in Chambersburg, Pennslyvania. Ludwig's Jewelers carries a unique selection of diamond jewelry, gemstone jewelry, bridal jewelry, watches, giftware, and so much more.");
+c++; item[c]=new Array("bridal.html","","Ludwigs Jewelers- Bridal Jewelry","bridal,engagement,ring,wedding,bands","Ludwigs Jewelers provides a wide variety of bridal jewelry including engagement rings and wedding band sets.");
+c++; item[c]=new Array("child.html","","Ludwigs Jewelers- Children Gifts","children,reed,barton,child,gift","Ludwigs Jewelers carries childrens gifts from Reed and Barton.");
+c++; item[c]=new Array("diamond.html","","Ludwigs Jewelers- Diamond Jewelry","diamond,jewelry,ring,earring,bracelet,mounting","Ludwigs Jewelers carries diamond jewelry set in 14k yellow or white gold mountings available in rings, earrings, and pendants.");
+c++; item[c]=new Array("gemstone.html","","Ludwigs Jewelers- Gemstone Jewelry","lgemstone,jewelry,ring,earring,bracelet","Ludwigs Jewelers has a wide selection of gemstone jewelry and gemstone varieties.");
+c++; item[c]=new Array("gifts.html","","Ludwigs Jewelers- Gifts","watches,gifts,giftware,child","Ludwigs Jewelers carries a wide selection of gifts and giftware, ranging from childrens gifts to jewelry boxes.");
+c++; item[c]=new Array("history.html","","Ludwigs Jewelers- History","family,ludwig,jewelers,civil,war,family,history","Ludwigs Jewelers has been in business for over 150 years and survived the burning of Chambersburg during the Civil War. Ludwigs Jewelers is now owned and operated by the 3rd and 4th generations of the Ludwig family.");
+c++; item[c]=new Array("jewelry.html","","Ludwigs Jewelers- Jewelry","jewelry,diamond,gemstone,ring,necklace,earring,bracelet,pendant","Ludwigs Jewelers carries a wide selection of jewelry with diamond and gemstone mountings.");
+c++; item[c]=new Array("location.html","","Ludwigs Jewelers- Location","location,directions,facebook,address,phone,number,street","Ludwigs Jewelers is located at 121 South Main Street in Chambersburg, PA.");
+c++; item[c]=new Array("repair.html","","Ludwigs Jewelers- Repair Services","repair,solder","Ludwigs Jewelers provides repair services on almost all types of jewelry.");
+c++; item[c]=new Array("silver.html","","Ludwigs Jewelers- Silver Jewelry","silver,jewelry,ring,earring,necklace,pendant","Ludwigs Jewelers carries a wide selection of Silver Jewelry.");
+c++; item[c]=new Array("watches.html","","Ludwigs Jewelers- Watches","watch,watches,seiko,citizen,eco,drive","Ludwigs Jewelers carries a wide selection of watches including the brand names Citizen and Seiko.");
+
+page="<html><head><title>Search Results</title></head><body bgcolor='white'><center><table border=0 cellspacing=10 width=80%>";
+
+
+function search(frm) {
+win = window.open("","","scrollbars");
+win.document.write(page);
+txt = frm.srchval.value.split(" ");
+fnd = new Array(); total=0;
+for (i = 0; i < item.length; i++) {
+fnd[i] = 0; order = new Array(0, 4, 2, 3);
+for (j = 0; j < order.length; j++)
+for (k = 0; k < txt.length; k++)
+if (item[i][order[j]].toLowerCase().indexOf(txt[k]) > -1 && txt[k] != "")
+fnd[i] += (j+1);
+}
+for (i = 0; i < fnd.length; i++) {
+n = 0; w = -1;
+for (j = 0;j < fnd.length; j++)
+if (fnd[j] > n) { n = fnd[j]; w = j; };
+if (w > -1) total += show(w, win, n);
+fnd[w] = 0;
+}
+win.document.write("</table><br>Total found: "+total+"<br></body></html>");
+win.document.close();
+}
+function show(which,wind,num) {
+link = item[which][1] + item[which][0]; 
+line = "<tr><td><a href='"+link+"'>"+item[which][2]+"</a> Score: "+num+"<br>";
+line += item[which][4] + "<br>"+link+"</td></tr>";
+wind.document.write(line);
+return 1;
+}
+
+</script>
+  </head>
+  <body>
+  	<h1 id="top">Ludwig's Jewelers</h1>
+        <div id="navcontainer">
+			 <ul id="navlist">
+			 	 <li><a href="index.html">Home</a></li>
+				 <li><a href="history.html">History</a></li>
+				 <li id="current"><a href="jewelry.html">Jewelry</a></li>
+				 <li><a href="gifts.html">Gifts</a></li>
+				 <li><a href="repair.html">Repair Status</a></li>
+				 <li><a href="location.html">Location</a></li>
+				 <li><a href="faq.html">FAQ</a></li>
+				 <li><form method=get action="javascript:void(0)" onsubmit="search(this); return false;">
+				<FONT COLOR="white">Search our site:</FONT>
+				<tr><td><input type=text name=srchval value=""><input type=submit value="Search"></td></tr>
+				</form></li>
+			</ul>
+		</div>
+		<h2 style="padding-bottom:60px">Our Store History</h2>
+		
+		<div class="floatLeft" style="margin-left:10cm"><img src="images/history.jpg" width="150%"></div>
+		<div class="floatRight" style="margin-right:15cm"><img src="images/history2.gif" width="150%"></div>
+		
+		<div id="history">
+		<p>In the 1870's,  Chambersburg was bustling with activity. The aftermath of the destruction 
+			of the town by Confederate forces in 1864 left Chambersburg rising from the ashes like a phoenix. 
+			New buildings were rapidly built with new and old businesses inhabiting them. One of these new businesses
+			 was a jewelry store started by an enterprising young man of 19 years, George W. Ludwig. His shop grew and thrived. 
+			 It became "the leading house of its kind in Chambersburg" as reported by the 1887 History of Franklin County. 
+			 George's brother, William H. Ludwig, joined him in the business.<a href="ref.html">(Mentzer, & Wagner, 2017)</a> William's interest in the business grew, as he then 
+			 became manager and eventually the owner of the store. At the age of 30, George decided to leave the business and fulfill 
+			 his life-long dream of becoming a doctor. He felt comfortable doing this, knowing the business would be in the good hands 
+			 of his brother. William was noted for his innovative display windows and newspaper advertisements. <br>
+			 </p>
+			 <p>
+			 When William died in 1926, it was the start of a difficult period for the business. The Great Depression 
+			 wasn't a time that many people were buying jewelry or giftware. The store hardly survived however, a partnership 
+			 with Dr. Hunter, an optician, helped keep the business afloat. Walter Ludwig, William's older son, kept his hand 
+			 in the family business during this time on a limited basis. His main occupation was a forester, working at the state 
+			 level in the Carlisle area for Governor Gifford Pinchot. After Pinchot left office so did Walter back to the store that was his roots. 
+			 Walter's younger son, William came into the business in 1939 but soon left for World War II. After the war, 
+			 he came home to run the store and eventually owned it with the deaths of his parents in 1951 and 1952. William "Bill" 
+			 did much to modernize and upgrade the store.<a href="ref.html">(Mentzer, & Wagner, 2017)</a> He took gemological courses from Gemological Institute of America and became 
+			 a registered jeweler with the American Gem Society. He remained active in the business until his death in 1990. Bill's daughters Ann, 
+			 Jane, and Emily, now operate the business. Kyle, Jane's daughter, now works full-time and Lacey, Emily's daughter, works part-time as she also teaches. 
+			 Above all, the legacy of George Ludwig continues to offer quality merchandise and service at reasonable prices </p>
+		</div>
+		
+		<div id="historyImage">
+		<img src="images/history2.jpg" width="736" height="490" alt="" border="0">
+  		<br />
+		<br />
+		<a href="#top" style="margin:8cm">Return to top of page</a>
+		<br />
+		</div>
+		
+		
+
+	
+  </body>
+</html>
+<div id = "footer" >Copyright &#169; 2017 Ludwig's Jewelers<br>
+	 	  <a href="ref.html">References</a><br />
+		  <a href="ps.html">Privacy Statement</a> <br />
+		  <a href="req.html">Requirements</a><br />
+	 	 <img src="images/storeLogo.jpg" width="250" height="75" alt="" ><br>
+ 	  	 <a href="https://www.americangemsociety.org/en/">AGS Member<br /><img src="images/agslogo.jpg" width="88" height="55" alt="" border="0"></a><br>
+		  <a href="mailto:vjmoore23@hotmail.com">Contact Us</a><br /><br />
+		  <a href ="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS<br /><img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss"
+           alt="Valid CSS!" /> </a> <br>
+  
+	
+</div>

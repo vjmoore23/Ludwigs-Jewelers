@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+ 	<link href = "css/css.css" type = "text/css" rel="stylesheet"/>
+    <meta name="description" content="Ludwig's Jeweler's provides a wide variety of bridal jewelry including engagement rings and wedding band sets.">
+    <meta name="keywords" content="engagement rings, wedding bands, bridal jewelry">
+    <title>Ludwig's Jewelers- Bridal Jewelry</title>
+    <link rel="icon" href="icon.png" />
+	
+	<SCRIPT LANGUAGE="JavaScript">
+
+var item = new Array();
+
+
+c=0; item[c]=new Array("index.html","","Ludwigs Jewelers- Homepage","ludwigs,homepage,index,jewelry,gift,diamond,gemstone","Ludwigs Jewelers is a family owned business located in Chambersburg, Pennslyvania. Ludwig's Jewelers carries a unique selection of diamond jewelry, gemstone jewelry, bridal jewelry, watches, giftware, and so much more.");
+c++; item[c]=new Array("bridal.html","","Ludwigs Jewelers- Bridal Jewelry","bridal,engagement,ring,wedding,bands","Ludwigs Jewelers provides a wide variety of bridal jewelry including engagement rings and wedding band sets.");
+c++; item[c]=new Array("child.html","","Ludwigs Jewelers- Children Gifts","children,reed,barton,child,gift","Ludwigs Jewelers carries childrens gifts from Reed and Barton.");
+c++; item[c]=new Array("diamond.html","","Ludwigs Jewelers- Diamond Jewelry","diamond,jewelry,ring,earring,bracelet,mounting","Ludwigs Jewelers carries diamond jewelry set in 14k yellow or white gold mountings available in rings, earrings, and pendants.");
+c++; item[c]=new Array("gemstone.html","","Ludwigs Jewelers- Gemstone Jewelry","lgemstone,jewelry,ring,earring,bracelet","Ludwigs Jewelers has a wide selection of gemstone jewelry and gemstone varieties.");
+c++; item[c]=new Array("gifts.html","","Ludwigs Jewelers- Gifts","watches,gifts,giftware,child","Ludwigs Jewelers carries a wide selection of gifts and giftware, ranging from childrens gifts to jewelry boxes.");
+c++; item[c]=new Array("history.html","","Ludwigs Jewelers- History","family,ludwig,jewelers,civil,war,family,history","Ludwigs Jewelers has been in business for over 150 years and survived the burning of Chambersburg during the Civil War. Ludwigs Jewelers is now owned and operated by the 3rd and 4th generations of the Ludwig family.");
+c++; item[c]=new Array("jewelry.html","","Ludwigs Jewelers- Jewelry","jewelry,diamond,gemstone,ring,necklace,earring,bracelet,pendant","Ludwigs Jewelers carries a wide selection of jewelry with diamond and gemstone mountings.");
+c++; item[c]=new Array("location.html","","Ludwigs Jewelers- Location","location,directions,facebook,address,phone,number,street","Ludwigs Jewelers is located at 121 South Main Street in Chambersburg, PA.");
+c++; item[c]=new Array("repair.html","","Ludwigs Jewelers- Repair Services","repair,solder","Ludwigs Jewelers provides repair services on almost all types of jewelry.");
+c++; item[c]=new Array("silver.html","","Ludwigs Jewelers- Silver Jewelry","silver,jewelry,ring,earring,necklace,pendant","Ludwigs Jewelers carries a wide selection of Silver Jewelry.");
+c++; item[c]=new Array("watches.html","","Ludwigs Jewelers- Watches","watch,watches,seiko,citizen,eco,drive","Ludwigs Jewelers carries a wide selection of watches including the brand names Citizen and Seiko.");
+
+page="<html><head><title>Search Results</title></head><body bgcolor='white'><center><table border=0 cellspacing=10 width=80%>";
+
+
+function search(frm) {
+win = window.open("","","scrollbars");
+win.document.write(page);
+txt = frm.srchval.value.split(" ");
+fnd = new Array(); total=0;
+for (i = 0; i < item.length; i++) {
+fnd[i] = 0; order = new Array(0, 4, 2, 3);
+for (j = 0; j < order.length; j++)
+for (k = 0; k < txt.length; k++)
+if (item[i][order[j]].toLowerCase().indexOf(txt[k]) > -1 && txt[k] != "")
+fnd[i] += (j+1);
+}
+for (i = 0; i < fnd.length; i++) {
+n = 0; w = -1;
+for (j = 0;j < fnd.length; j++)
+if (fnd[j] > n) { n = fnd[j]; w = j; };
+if (w > -1) total += show(w, win, n);
+fnd[w] = 0;
+}
+win.document.write("</table><br>Total found: "+total+"<br></body></html>");
+win.document.close();
+}
+function show(which,wind,num) {
+link = item[which][1] + item[which][0]; 
+line = "<tr><td><a href='"+link+"'>"+item[which][2]+"</a> Score: "+num+"<br>";
+line += item[which][4] + "<br>"+link+"</td></tr>";
+wind.document.write(line);
+return 1;
+}
+</script>
+  </head>
+  <body>
+  	<h1 id="top">Ludwig's Jewelers</h1>
+        <div id="navcontainer">
+			 <ul id="navlist">
+			 	 <li><a href="index.html">Home</a></li>
+				 <li><a href="history.html">History</a></li>
+				 <li id="current"><a href="jewelry.html">Jewelry</a></li>
+				 <li><a href="gifts.html">Gifts</a></li>
+				 <li><a href="repair.html">Repair Status</a></li>
+				 <li><a href="location.html">Location</a></li>
+				 <li><a href="faq.html">FAQ</a></li>
+				 <li><form method=get action="javascript:void(0)" onsubmit="search(this); return false;">
+				<FONT COLOR="white">Search our site:</FONT>
+				<tr><td><input type=text name=srchval value=""><input type=submit value="Search"></td></tr>
+				</form></li>
+			</ul>
+		</div>
+		<div id="contentTwo" style="margin-left:2cm">
+		<h2>Requirements</h2>
+		Requirements Checklist
+Criteria	What this means	URL
+Page Requirements	Failure to meet the page requirements will result in a 10 point reduction of your score.<br />
+ 
+Your Website must consist of at least 10 pages<br />	
+	Your main page must have a link to your other pages <br />	
+	All other pages must have a link back to your main page<br /> 	
+	Each page must have a title (using the HTML title tags)<br />	
+	Each page has the proper HTML5 structure and should validate using W3c's HTML5 and CSS validators. Validated icons should appear at the bottom of each page.	<br />
+	Each page must have an appropriate background color or graphic<br />
+	Graphics should be locally hosted and not linked to from third party sites	<br />
+Site Requirements	Required Content: <br />
+Your site includes a substantial amount of well-written content. It's easy to understand the business that the site is created to support<br />
+ 	
+	Your site includes a copyright statement in the footer section of each page	<br />
+	Your site includes a references page citing all content that isn't original in MLA or APA format	<br />
+	Your site includes a detailed Privacy Statement	<br />
+	Your site includes a FAQ using same page links. Put your questions at the top of the page. Link to answers further down the page. Offer "Top of page" links to get back to the question section	<br />
+Graphics and Multimedia	You have a minimum of two regular and two hyperlinked graphics. Text wraps around graphics to avoid awkward white space	<br />
+	There are no broken graphics or problems with aspect ratio. All graphics are well optimized for the web.	<br />
+	The site includes an original multimedia element that you create (Audio, Video, Flash, HTML5 Canvas, etc). This element should make sense in the context of the site	<br />
+	Your site includes a Web Form: <br />
+Your form must be functional in order to score points.<br />
+Your form includes a minimum of one text input field, one scrolling text box (textarea), a checkbox or radio button, and a select list.	<br />
+	Your form includes fieldset and legend elements	<br />
+	Your form includes label and tabindex accessibility enhancements	<br />
+	Your form must be styled with CSS so that form fields are a color other than the default white.<br />	
+	It must contain at least one required field (marked by an asterisk*)	<br />
+	It must be validated using a JavaScript form validator. You can write this yourself or you can tap an existing script (please cite source).<br />	
+Technical Requirements: 	CSS: The majority of formatting for your site is handled via an External Style Sheet (.css)	<br />
+	Validation: Your Pages validate without errors using the W3C HTML5 Validator  and the W3C Validated HTML5 icon is placed at the bottom of the each page (only if page validates without errors)	<br />
+	Your site includes an original JavaScript that you write yourself.	<br />
+	Your site includes TWO of the following:<br />
+"	A CSS based photo gallery <br />
+"	A working demo of a shopping cart <br />
+"	A within-the-site search	<br />
+Design and Usability	The site demonstrates an understanding of the 4 Page Layout Principles as described in class: Contrast, Proximity, Alignment, and Repetition	<br />
+	Site navigation is easy to use	<br />
+	The text is of a size, color, and style that is easy to read on the chosen background color or graphic	<br />
+	Text and graphic placement is visually appealing<br />
+	There are unifying elements that make the pages seem that they belong together	<br />
+	Search Engine Optimization: <br />
+
+Each page should have meta tags that are appropriate to that page including<br /> 
+
+"	Description<br />
+"	Keywords<br />
+"	Robots<br />
+"	Author<br />
+"	copyright tags.<br />	
+	Your site includes an XML Sitemap	<br />
+
+</div>
+  </body>
+</html>
+	
+<div id = "footer" >Copyright &#169; 2017 Ludwig's Jewelers<br>
+	 	  <a href="ref.html">References</a><br />
+		  <a href="ps.html">Privacy Statement</a> <br />
+		  <a href="req.html">Requirements</a><br />
+	 	 <img src="images/storeLogo.jpg" width="250" height="75" alt="" ><br>
+ 	  	 <a href="https://www.americangemsociety.org/en/">AGS Member<br /><img src="images/agslogo.jpg" width="88" height="55" alt="" border="0"></a><br>
+		  <a href="mailto:vjmoore23@hotmail.com">Contact Us</a><br /><br />
+		  <a href ="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS<br /><img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss"
+           alt="Valid CSS!" /> </a> <br>
+  
+	
+</div>
